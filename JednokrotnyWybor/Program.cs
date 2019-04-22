@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JednokrotnyWybor.Model;
+using JednokrotnyWybor.Presenter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,12 @@ namespace JednokrotnyWybor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            QuizModel model = new QuizModel();
+            IQuizView view = new Form1();
+            QuizPresenter presenter = new QuizPresenter(view, model);
+
+            Application.Run((Form) view);
         }
     }
 }
