@@ -11,6 +11,9 @@ namespace JednokrotnyWybor.Presenter
         event Action<string> LoadTestFromJson;
         // show PASS/FAIL message with counted points
         event Action PrepareResults;
+        string Title { set; }
+        string Author { set; }
+        string Description { set; }
         List<Question> Questions { set; }
         List<Answer> Answers { get; }
         List<string> ResultsExplaination { set; }

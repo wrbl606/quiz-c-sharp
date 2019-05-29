@@ -36,6 +36,8 @@ namespace JednokrotnyWybor
             }
         }
 
+        public string Question { set => QuestionContent.Text = value; }
+
         public void ShowResult(bool isCorrect, string resultExplaination)
         {
             throw new NotImplementedException();

@@ -26,13 +26,18 @@ namespace JednokrotnyWybor
                     IQuestionView view = new QuestionView();
                     QuestionPresenter presenter = new QuestionPresenter(view);
                     QuestionsList.Controls.Add((QuestionView)view);
+                    presenter.View.Question = question.Content;
                     presenter.View.Answers = question.Answers;
                 }
+
         } }
 
         public List<Answer> Answers => throw new NotImplementedException();
 
         public List<string> ResultsExplaination { set => throw new NotImplementedException(); }
+        public string Title { set => TestTitle.Text = value; }
+        public string Author { set => TestAuthor.Text = value; }
+        public string Description { set => TestDescription.Text = value; }
 
         public event Action<string> LoadTestFromJson;
         public event Action PrepareResults;

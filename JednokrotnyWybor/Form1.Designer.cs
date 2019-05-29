@@ -75,13 +75,23 @@
             // 
             // QuestionsList
             // 
+            this.QuestionsList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuestionsList.AutoScroll = true;
+            this.QuestionsList.AutoScrollMinSize = new System.Drawing.Size(750, 600);
+            this.QuestionsList.AutoSize = true;
+            this.QuestionsList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.QuestionsList.ColumnCount = 1;
             this.QuestionsList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.QuestionsList.Location = new System.Drawing.Point(25, 122);
             this.QuestionsList.Name = "QuestionsList";
             this.QuestionsList.RowCount = 1;
             this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QuestionsList.Size = new System.Drawing.Size(763, 578);
+            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.QuestionsList.Size = new System.Drawing.Size(750, 600);
             this.QuestionsList.TabIndex = 4;
             // 
             // Form1

@@ -37,6 +37,7 @@
             // 
             this.QuestionContent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.QuestionContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.QuestionContent.Location = new System.Drawing.Point(4, 4);
             this.QuestionContent.Margin = new System.Windows.Forms.Padding(12, 8, 12, 4);
             this.QuestionContent.Name = "QuestionContent";
@@ -66,14 +67,14 @@
             this.ResultExplaination.TabIndex = 2;
             this.ResultExplaination.Text = "label1";
             // 
-            // Question
+            // QuestionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ResultExplaination);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.QuestionContent);
-            this.Name = "Question";
+            this.Name = "QuestionView";
             this.Size = new System.Drawing.Size(681, 195);
             this.ResumeLayout(false);
 

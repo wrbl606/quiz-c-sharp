@@ -38,8 +38,16 @@ namespace JednokrotnyWybor.Presenter
             answer.Content = "nie wiem";
             answer.Points = 1;
             question.Answers.Add(answer);
+
+            Question question2 = new Question();
+            question.Content = "YTETDSF?";
             test.Questions.Add(question);
-            view.Questions = new List<Question> { question };
+
+            view.Title = test.Title;
+            view.Author = test.Author;
+            view.Description = test.Description;
+
+            view.Questions = new List<Question> { question, question2, question, question };
         }
     }
 }
