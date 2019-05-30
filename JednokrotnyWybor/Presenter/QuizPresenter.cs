@@ -11,6 +11,7 @@ namespace JednokrotnyWybor.Presenter
     {
         readonly QuizModel model;
         readonly IQuizView view;
+        private List<Question> questions;
 
         public QuizPresenter(IQuizView view, QuizModel model)
         {
@@ -23,31 +24,26 @@ namespace JednokrotnyWybor.Presenter
 
         private void View_PrepareResults()
         {
-            throw new NotImplementedException();
+            List<List<Answer>> answers = view.Answers;
+            List<Result> results = new List<Result>();
+            for (int i = 0; i < answers.Count; i++)
+            {
+                int points = 0;
+                foreach (Answer questionAnswer in answers[i])
+                {
+                    points += questionAnswer.Points;
+                }
+                results.Add(new Result(points >= 0, $"You've {(points >= 0 ? "earned" : "lost")} {points} on this question"));
+            }
+
+            view.ResultsExplaination = results;
         }
 
         private void View_LoadTestFromJson(string path)
         {
-            Test test = new Test();
-            test.Author = "Marcin";
-            test.Title = "Biolka";
-            test.Description = "Krótki opis";
-            Question question = new Question();
-            question.Content = "Czemy kaczki mają zimne nogi?";
-            Answer answer = new Answer();
-            answer.Content = "nie wiem";
-            answer.Points = 1;
-            question.Answers.Add(answer);
-
-            Question question2 = new Question();
-            question.Content = "YTETDSF?";
-            test.Questions.Add(question);
-
-            view.Title = test.Title;
-            view.Author = test.Author;
-            view.Description = test.Description;
-
-            view.Questions = new List<Question> { question, question2, question, question };
+            Test test = model.LoadTest(path);
+            questions = test.Questions;
+            view.Questions = test.Questions;
         }
     }
 }

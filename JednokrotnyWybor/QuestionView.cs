@@ -20,7 +20,24 @@ namespace JednokrotnyWybor
             InitializeComponent();
         }
 
-        public Answer Answer => throw new NotImplementedException();
+        public List<Answer> AnswersGiven {
+            get
+            {
+                List<Answer> answersGiven = new List<Answer>();
+
+                ListView.ListViewItemCollection items = AnswersList.Items;
+                foreach (ListViewItem answerView in items)
+                {
+                    if (answerView.Checked)
+                    {
+                        Answer answer = answers.Find(answerData => answerData.Content.Equals(answerView.Text));
+                        if (answer != null) answersGiven.Add(answer);
+                    }
+                }
+
+                return answersGiven;
+            }
+        }
 
         public List<Answer> Answers
         {
@@ -31,7 +48,7 @@ namespace JednokrotnyWybor
                 answers = value;
                 foreach (Answer answer in answers)
                 {
-                    listView1.Items.Add(answer.Content);
+                    AnswersList.Items.Add(answer.Content);
                 }
             }
         }
@@ -39,8 +56,9 @@ namespace JednokrotnyWybor
         public string Question { set => QuestionContent.Text = value; }
 
         public void ShowResult(bool isCorrect, string resultExplaination)
-        {
-            throw new NotImplementedException();
+        { 
+            ResultExplaination.Text = resultExplaination;
+            ResultExplaination.ForeColor = isCorrect ? Color.DarkGreen : Color.DarkRed;
         }
     }
 }

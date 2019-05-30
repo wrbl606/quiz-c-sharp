@@ -1,4 +1,5 @@
-﻿using System;
+﻿using JednokrotnyWybor.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace JednokrotnyWybor.Presenter
         string Author { set; }
         string Description { set; }
         List<Question> Questions { set; }
-        List<Answer> Answers { get; }
-        List<string> ResultsExplaination { set; }
+        List<List<Answer>> Answers { get; }
+        List<Result> ResultsExplaination { set; }
     }
 }

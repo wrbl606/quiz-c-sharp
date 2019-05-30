@@ -32,7 +32,8 @@
             this.TestTitle = new System.Windows.Forms.Label();
             this.TestAuthor = new System.Windows.Forms.Label();
             this.TestDescription = new System.Windows.Forms.Label();
-            this.QuestionsList = new System.Windows.Forms.TableLayoutPanel();
+            this.QuestionsList = new System.Windows.Forms.FlowLayoutPanel();
+            this.FinishQuizButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -42,6 +43,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(775, 24);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // TestTitle
             // 
@@ -52,7 +54,6 @@
             this.TestTitle.Size = new System.Drawing.Size(134, 32);
             this.TestTitle.TabIndex = 1;
             this.TestTitle.Text = "TestTitle";
-            this.TestTitle.Click += new System.EventHandler(this.TestTitle_Click);
             // 
             // TestAuthor
             // 
@@ -79,26 +80,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.QuestionsList.AutoScroll = true;
-            this.QuestionsList.AutoScrollMinSize = new System.Drawing.Size(750, 600);
-            this.QuestionsList.AutoSize = true;
-            this.QuestionsList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.QuestionsList.ColumnCount = 1;
-            this.QuestionsList.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QuestionsList.Location = new System.Drawing.Point(25, 122);
+            this.QuestionsList.Location = new System.Drawing.Point(13, 130);
             this.QuestionsList.Name = "QuestionsList";
-            this.QuestionsList.RowCount = 1;
-            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.QuestionsList.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.QuestionsList.Size = new System.Drawing.Size(750, 600);
+            this.QuestionsList.Size = new System.Drawing.Size(775, 623);
             this.QuestionsList.TabIndex = 4;
+            // 
+            // FinishQuizButton
+            // 
+            this.FinishQuizButton.Location = new System.Drawing.Point(12, 759);
+            this.FinishQuizButton.Name = "FinishQuizButton";
+            this.FinishQuizButton.Size = new System.Drawing.Size(776, 41);
+            this.FinishQuizButton.TabIndex = 5;
+            this.FinishQuizButton.Text = "Finish";
+            this.FinishQuizButton.UseVisualStyleBackColor = true;
+            this.FinishQuizButton.Click += new System.EventHandler(this.FinishQuizButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 771);
+            this.ClientSize = new System.Drawing.Size(800, 812);
+            this.Controls.Add(this.FinishQuizButton);
             this.Controls.Add(this.QuestionsList);
             this.Controls.Add(this.TestDescription);
             this.Controls.Add(this.TestAuthor);
@@ -117,7 +119,8 @@
         private System.Windows.Forms.Label TestTitle;
         private System.Windows.Forms.Label TestAuthor;
         private System.Windows.Forms.Label TestDescription;
-        private System.Windows.Forms.TableLayoutPanel QuestionsList;
+        private System.Windows.Forms.FlowLayoutPanel QuestionsList;
+        private System.Windows.Forms.Button FinishQuizButton;
     }
 }
 

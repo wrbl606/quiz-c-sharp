@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.QuestionContent = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.AnswersList = new System.Windows.Forms.ListView();
             this.ResultExplaination = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,16 +45,16 @@
             this.QuestionContent.TabIndex = 0;
             this.QuestionContent.Text = "label1";
             // 
-            // listView1
+            // AnswersList
             // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.AnswersList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView1.CheckBoxes = true;
-            this.listView1.Location = new System.Drawing.Point(3, 84);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(671, 108);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.AnswersList.CheckBoxes = true;
+            this.AnswersList.Location = new System.Drawing.Point(3, 84);
+            this.AnswersList.Name = "AnswersList";
+            this.AnswersList.Size = new System.Drawing.Size(671, 108);
+            this.AnswersList.TabIndex = 1;
+            this.AnswersList.UseCompatibleStateImageBehavior = false;
             // 
             // ResultExplaination
             // 
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ResultExplaination);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.AnswersList);
             this.Controls.Add(this.QuestionContent);
             this.Name = "QuestionView";
             this.Size = new System.Drawing.Size(681, 195);
@@ -83,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Label QuestionContent;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView AnswersList;
         private System.Windows.Forms.Label ResultExplaination;
     }
 }

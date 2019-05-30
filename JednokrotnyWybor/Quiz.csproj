@@ -59,6 +59,7 @@
     <Compile Include="Model\Data\Answer.cs" />
     <Compile Include="Model\Data\Question.cs" />
     <Compile Include="Model\QuizModel.cs" />
+    <Compile Include="Model\Result.cs" />
     <Compile Include="Presenter\IQuestionView.cs" />
     <Compile Include="Presenter\IQuizView.cs" />
     <Compile Include="Presenter\QuestionPresenter.cs" />

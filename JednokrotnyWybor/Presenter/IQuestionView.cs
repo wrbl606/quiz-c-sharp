@@ -10,7 +10,7 @@ namespace JednokrotnyWybor.Presenter
     {
         void ShowResult(bool isCorrect, string resultExplaination);
         string Question { set; }
-        Answer Answer { get; }
+        List<Answer> AnswersGiven { get; }
         List<Answer> Answers { get; set; } 
     }
 }
