@@ -54,7 +54,7 @@ namespace JednokrotnyWybor
                     questionViews[i].View.ShowResult(result.IsCorrect, result.Explaination);
                 }
             } }
-        public string Title { set => TestTitle.Text = value; }
+        public string Title { set { TestTitle.Text = value; comboBox1.Text = value; } }
         public string Author { set => TestAuthor.Text = value; }
         public string Description { set => TestDescription.Text = value; }
 

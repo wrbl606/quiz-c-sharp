@@ -51,9 +51,8 @@
             this.TestTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.TestTitle.Location = new System.Drawing.Point(13, 43);
             this.TestTitle.Name = "TestTitle";
-            this.TestTitle.Size = new System.Drawing.Size(134, 32);
+            this.TestTitle.Size = new System.Drawing.Size(0, 32);
             this.TestTitle.TabIndex = 1;
-            this.TestTitle.Text = "TestTitle";
             // 
             // TestAuthor
             // 
@@ -61,18 +60,17 @@
             this.TestAuthor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.TestAuthor.Location = new System.Drawing.Point(19, 79);
             this.TestAuthor.Name = "TestAuthor";
-            this.TestAuthor.Size = new System.Drawing.Size(83, 18);
+            this.TestAuthor.Size = new System.Drawing.Size(0, 18);
             this.TestAuthor.TabIndex = 2;
-            this.TestAuthor.Text = "Test author";
             // 
             // TestDescription
             // 
             this.TestDescription.AutoSize = true;
             this.TestDescription.Location = new System.Drawing.Point(22, 101);
             this.TestDescription.Name = "TestDescription";
-            this.TestDescription.Size = new System.Drawing.Size(79, 17);
+            this.TestDescription.Size = new System.Drawing.Size(195, 17);
             this.TestDescription.TabIndex = 3;
-            this.TestDescription.Text = "Description";
+            this.TestDescription.Text = "Wybierz quiz w menu powyżej";
             // 
             // QuestionsList
             // 
@@ -91,7 +89,7 @@
             this.FinishQuizButton.Name = "FinishQuizButton";
             this.FinishQuizButton.Size = new System.Drawing.Size(776, 41);
             this.FinishQuizButton.TabIndex = 5;
-            this.FinishQuizButton.Text = "Finish";
+            this.FinishQuizButton.Text = "Zakończ test";
             this.FinishQuizButton.UseVisualStyleBackColor = true;
             this.FinishQuizButton.Click += new System.EventHandler(this.FinishQuizButton_Click);
             // 
@@ -106,8 +104,11 @@
             this.Controls.Add(this.TestAuthor);
             this.Controls.Add(this.TestTitle);
             this.Controls.Add(this.comboBox1);
+            this.MaximumSize = new System.Drawing.Size(818, 859);
+            this.MinimumSize = new System.Drawing.Size(818, 859);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quiz - Marcin Wróblewski";
             this.ResumeLayout(false);
             this.PerformLayout();
 

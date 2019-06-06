@@ -65,7 +65,6 @@
             this.ResultExplaination.Name = "ResultExplaination";
             this.ResultExplaination.Size = new System.Drawing.Size(674, 21);
             this.ResultExplaination.TabIndex = 2;
-            this.ResultExplaination.Text = "label1";
             // 
             // QuestionView
             // 

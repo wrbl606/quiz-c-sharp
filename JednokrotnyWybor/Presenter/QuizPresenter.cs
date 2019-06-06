@@ -42,6 +42,9 @@ namespace JednokrotnyWybor.Presenter
         private void View_LoadTestFromJson(string path)
         {
             Test test = model.LoadTest(path);
+            view.Title = test.Title;
+            view.Author = test.Author;
+            view.Description = test.Description;
             questions = test.Questions;
             view.Questions = test.Questions;
         }
